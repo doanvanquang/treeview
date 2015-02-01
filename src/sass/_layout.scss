@@ -1,0 +1,84 @@
+body, p, ul, li, div {
+    font-size: $body-font-size;
+}
+
+.row {
+    max-width: none;
+}
+
+.site-wrapper {
+    min-height: 100%;
+    position: relative;
+
+    .top-bar {
+        .name {
+            .logo {
+                color: #000000;
+                font-size: 13px;
+                font-weight: bold;
+            }
+        }
+    }
+
+    .site-main {
+        padding-bottom: 50px;
+
+        .left-menu {
+            padding: 0;
+            background: $navigation-bg-color;
+            position: absolute;
+            top: 45px;
+            bottom: 0;
+
+            ul.side-nav {
+                li {
+                    a {
+                        color: $navigation-menu-color;
+                    }
+                    a:hover {
+                        background-color: $navigation-menu-hover-bg-color;
+                    }
+                }
+                li.active {
+                    background-color: $navigation-menu-hover-bg-color;
+
+                    a {
+                        position: relative;
+                    }
+
+                    a:after {
+                        content: "\f0d9";
+                        font-family: FontAwesome;
+                        display: block;
+                        width: 27px;
+                        height: 27px;
+                        position: absolute;
+                        right: -21px;
+                        top: 3px;
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+
+        .main-content {
+            top: 45px;
+        }
+    }
+
+    footer.site-footer {
+        hr {
+            margin: 0;
+        }
+
+        p, ul {
+            line-height: $footer-height;
+            margin: 0;
+        }
+
+        height: $footer-height;
+        position: absolute;
+        bottom: 0;
+        background-color: $body-bg;
+    }
+}

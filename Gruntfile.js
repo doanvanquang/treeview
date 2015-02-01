@@ -58,7 +58,7 @@ module.exports = function (grunt) {
           livereload: '<%= connect.options.livereload %>'
         },
         files: [
-          '<%= yeoman.app %>/{,*/}*.html',
+          '<%= yeoman.src %>/{,*/}*.html',
           '.tmp/styles/{,*/}*.css',
           '<%= yeoman.src %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
         ]
@@ -168,7 +168,8 @@ module.exports = function (grunt) {
     wiredep: {
       app: {
         src: ['<%= yeoman.src %>/index.html'],
-        ignorePath:  /\.\.\//
+        ignorePath:  /\.\.\//,
+        exclude: ['foundation.css']
       },
       sass: {
         src: ['<%= yeoman.src %>/sass/{,*/}*.{scss,sass}'],
