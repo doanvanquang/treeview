@@ -1,0 +1,18 @@
+<script type="text/ng-template" id="node_renderer.html">
+  {{ node.title }}
+  <ul ng-if="node.childNodes.length">
+      <li ng-repeat="node in node.childNodes"
+        ng-include="'node_renderer.html'"
+        ng-class="{ collapse: node.isCollapsed, hasChild: node.childNodes.length }"
+        ng-click="toggle(node, $event)">
+      </li>
+  </ul>
+</script>
+
+<ul class="treeview">
+  <li ng-repeat="node in tree.rootNode.childNodes"
+    ng-class="{ collapse: node.isCollapsed, hasChild: node.childNodes.length }"
+    ng-click="toggle(node, $event)"
+    ng-include="'node_renderer.html'">
+  </li>
+</ul>

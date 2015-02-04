@@ -9,7 +9,7 @@
  * Main module of the application.
  */
 angular
-  .module('appstructureApp', [
+  .module('treeViewApp', [
     'ngAnimate',
     'ngCookies',
     'ngResource',

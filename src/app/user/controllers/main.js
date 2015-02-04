@@ -7,11 +7,72 @@
  * # MainCtrl
  * Controller of the appstructureApp
  */
-angular.module('appstructureApp')
-  .controller('MainCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+
+var treeViewApp = angular.module('treeViewApp');
+
+treeViewApp.controller('MainCtrl', function($scope) {
+    $scope.treeData = {
+                    folders: {
+                        label: 'Folders',
+                        childs: {
+                            classi_school: {
+                                label: 'Classi school',
+                                childs: {
+                                    controller: {
+                                        label: 'Controller',
+                                        childs: {
+
+                                        }
+                                    },
+                                    directive: {
+                                        label: 'Directive',
+                                        childs: {
+
+                                        }
+                                    }
+                                }
+                            },
+                            classi_school_front: {
+                                label: 'Classi school front',
+                                childs: {
+                                    controller: {
+                                        label: 'Controller',
+                                        childs: {
+
+                                        }
+                                    },
+                                    directive: {
+                                        label: 'Directive',
+                                        childs: {
+
+                                        }
+                                    }
+                                }
+                            },
+                            autoload: {
+                                label: 'Auto load',
+                                childs: {
+                                    controller: {
+                                        label: 'Controller',
+                                        childs: {
+
+                                        }
+                                    },
+                                    directive: {
+                                        label: 'Directive',
+                                        childs: {
+
+                                        }
+                                    }
+                                }
+                            },
+                            todo: {
+                                label: 'Todo',
+                                childs: {
+
+                                }
+                            }
+                        }
+                    }
+                };
+});
